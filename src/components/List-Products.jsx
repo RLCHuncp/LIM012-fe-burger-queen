@@ -43,7 +43,6 @@ const ListProducts = () => {
     }
     const ProductItemOrder = (id) =>{
         const arrayFilter = order.filter((ele) => parseInt(ele.idOrder) !== parseInt(id))
-        console.log(arrayFilter)
         setOrder(arrayFilter)
     }
 
