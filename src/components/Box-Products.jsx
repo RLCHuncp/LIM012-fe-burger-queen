@@ -3,7 +3,7 @@ import add from '../images/add.svg'
 import quit from '../images/menos.png'
 import agregar from '../images/agregar1.png'
 
-const BoxProducts = ({image, title, price, id, pruebita}) => {
+const BoxProducts = ({image, title, price, id, showProduct}) => {
 
     const [count, setCount] = React.useState(0)
     
@@ -17,7 +17,7 @@ const BoxProducts = ({image, title, price, id, pruebita}) => {
             setCount(0);
         } else{ 
             setCount(count - 1);
-        }  
+        } 
     }
 
     const addItemProduct = (count, id, title, price) =>{
@@ -26,9 +26,10 @@ const BoxProducts = ({image, title, price, id, pruebita}) => {
         } else {
             const objProduct = {
                 id,
+                idOrder:Math.random(10) * 1000,
                 Descripcion: title,
                 Precio: (price*count),
-                Cantidad: count, 
+                Cantidad: count,
             }
             return objProduct
         }
@@ -37,7 +38,7 @@ const BoxProducts = ({image, title, price, id, pruebita}) => {
     const addProduct = (event) => {
         event.preventDefault();
        const listProduct = addItemProduct(count, id, title, price)
-        pruebita(listProduct)
+        showProduct(listProduct)
     }
 
     return (
@@ -50,7 +51,7 @@ const BoxProducts = ({image, title, price, id, pruebita}) => {
                     <img className="box__btn--itemQ" src={quit} onClick = {decremento} alt=""/>
                     <input type="text" value={count}/>
                     <img className="box__btn--item" src={add} onClick = {incremento}alt=""/>
-                    <button className="button__icon" onClick = {addProduct}>
+                    <button className="button__icon" onClick = {addProduct} >
                         <img className="box__btn--item" src={agregar} alt=""/>
                     </button>
                 </div>
