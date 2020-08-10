@@ -56,10 +56,6 @@
             align-items: center;
             color: #fff;
         }
-        .img__delete{
-            width: 30px;
-            margin-left: 120px;
-        }
             .img--item1{
                 width: 100px;
                 height: 100px;
@@ -121,80 +117,4 @@
             }
 
 
-    .list-pedidos{
-        /* background: magenta; */
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        
-    }
-        .datos{
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-            /* background: rebeccapurple; */
-            margin-bottom: 20px;
-        }
-            .datos p{
-                font-size: 12px;
-                font-family: 'Muli', sans-serif;
-                text-transform: uppercase;
-                letter-spacing: 3px;
-                padding-right: 10px;
-            }
-            .datos input{
-                width: 250px;
-                height: 30px;
-            }
-    .inventario-pedidos{
-        /* background: red; */
-        display: flex;
-        flex-direction: column;
-        background: rgba(255, 128, 0, 0.8);
-        height: 300px;
-        align-self: center;
-        border-radius: 20px;
-        align-content: center;
-        justify-content: space-between;
-    }
-        .inventario-pedidos ul{
-            display: flex;
-            list-style: none;
-            align-items: center;
-            justify-content: center;
-        }
-        .inventario-pedidos li{
-            padding-right: 20px;
-            text-transform: uppercase;
-            font-family: 'Muli', sans-serif;
-            letter-spacing: 3px;
-            font-size: 15px;
-            color: #ffffff;
-        }
-        .button-pedidos{
-            width: 120px;
-            height: 50px;
-            border-radius: 10px;
-            border: none;
-            text-transform: uppercase;
-            font-family: 'Muli', sans-serif;
-            background: #ffffff;
-            box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            outline: none;
-            align-self: center;
-            margin-bottom: 30px;
-        }
-        .button-pedidos:hover{
-            background: #FF8000;
-            color: #ffffff;
-        }
-        .none{
-            display: none;
-        }
-        .block{
-            display: block;
-        }
-        
+    
