@@ -42,15 +42,9 @@ const ListProducts = () => {
         setClient(nameClient)
     }
     const ProductItemOrder = (id) =>{
-        console.log(id)
-        // const findList = order.find((ele) => ele.id===id);
-        // const indexofList = order.indexOf(findList);
-        // const arrProduct = order.splice(indexofList, 1);
-        // const newArray = [...arrProduct];
         const arrayFilter = order.filter((ele) => parseInt(ele.idOrder) !== parseInt(id))
         console.log(arrayFilter)
         setOrder(arrayFilter)
-        // setOrder(prevState => [...prevState, newArray])
     }
 
     return (
