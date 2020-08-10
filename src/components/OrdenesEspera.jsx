@@ -6,7 +6,7 @@ const OrdenesEspera = () => {
         <div>
             <Navbar />
             <p>
-                Ordenes en Espera
+                Ordenes en Espera de:
             </p>
         </div>
     )
