@@ -12,7 +12,8 @@ const ListProducts = () => {
         type: 'Desayuno'
     })
     const [order, setOrder] = React.useState([])
-    
+    const [client, setClient] = React.useState('')
+
     React.useEffect(() => {
         const dataProducts = async() => {
             try{
@@ -24,7 +25,6 @@ const ListProducts = () => {
                         ...doc.data()
                     }
                 ))
-                console.log(arrayData)
                 setState(prevState => ({...prevState, products:arrayData}))
             } catch (error) {
                 console.error(error)
@@ -32,10 +32,27 @@ const ListProducts = () => {
         }
         dataProducts()
     }, [])
-    const pruebita = (product) => {
+
+    const showProduct = (product) => {
         // console.log(product)
         setOrder(prevState => [...prevState, product])
     }
+    const eventChange = (event) => {
+        const nameClient = event.target.value;
+        setClient(nameClient)
+    }
+    const ProductItemOrder = (id) =>{
+        console.log(id)
+        // const findList = order.find((ele) => ele.id===id);
+        // const indexofList = order.indexOf(findList);
+        // const arrProduct = order.splice(indexofList, 1);
+        // const newArray = [...arrProduct];
+        const arrayFilter = order.filter((ele) => parseInt(ele.idOrder) !== parseInt(id))
+        console.log(arrayFilter)
+        setOrder(arrayFilter)
+        // setOrder(prevState => [...prevState, newArray])
+    }
+
     return (
         <Fragment>
             <Navbar />
@@ -73,14 +90,18 @@ const ListProducts = () => {
                         initialState.products.map((ele) => {
                             if(ele.type === initialState.type){
                                 return(
-                                    <BoxProducts key={ele.id} {...ele} pruebita={pruebita}/>
+                                    <BoxProducts key={ele.id} {...ele} showProduct={showProduct}/>
                                 )
                             }
                         })
                     }
                     </div>
                 </div>
-                <BoxPedidos order={order}/>
+                <BoxPedidos 
+                order={order}
+                eventChange={eventChange} client={client}
+                ProductItemOrder={ProductItemOrder}
+                />
             </div>
         </Fragment>
     )
