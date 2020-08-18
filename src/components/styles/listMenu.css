@@ -91,24 +91,6 @@
                 .button__icon:focus{
                     outline: none;
                 }
-            .img--item2{
-                width: 105px;
-                margin-top: -60px;
-            }
-            .img--item3{
-                width: 150px;
-                margin-top: 10px;
-            }
-            .img--item4{
-                width: 90px;
-            }
-            .img--itemA{
-                width: 20px;
-                margin-top: 30px;
-            }
-            .img--itemB{
-                width: 30px;
-            }
             .box__btn--item{    
                 width: 20px;
             }

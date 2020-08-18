@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react'
 import waiter from '../images/waiter.svg'
-import {Link} from 'react-router-dom'
 import err from '../images/delete.svg'
 import './styles/box-pedidos.css'
+import { useHistory } from "react-router-dom";
 
-const BoxPedidos = ({order, eventChange, client, ProductItemOrder}) => {
-    
+const BoxPedidos = ({order, eventChange, client, ProductItemOrder, sendOrderBD}) => {
+    const clientRegister = client;
     const btnEliminarItem = (event) => {
         event.preventDefault();
         ProductItemOrder(event.target.id)
@@ -15,8 +15,27 @@ const BoxPedidos = ({order, eventChange, client, ProductItemOrder}) => {
         return order.reduce(
           (sum,{Precio}) =>sum+Precio,
           0
-    );
+        );
     }
+    let history = useHistory();
+    let today = new Date()
+    const date = today.toLocaleString([], { hour12: true});
+    const sendOrder = () =>{
+        if(clientRegister===''){
+            alert('Ingrese nombre del cliente');
+        } else {
+            const orderBD = {
+                Cliente: clientRegister,
+                Order: order,
+                Total: getTotalSum(),
+                Fecha: date,
+        }
+        sendOrderBD(orderBD)
+        alert('Se envió la orden');
+        }
+        history.push("/OrdenesEspera");
+    }
+
     return (
         <Fragment>
             <div className="list-pedidos">
@@ -50,8 +69,8 @@ const BoxPedidos = ({order, eventChange, client, ProductItemOrder}) => {
                         }
                     </div>
                     <p className="total--suma">TOTAL: <span>${getTotalSum(order)}</span></p>
-                    <button className="button-pedidos"><img className="waiter" src={waiter} alt="waiter"/>
-                        <Link to="/OrdenesEspera" className="links">Enviar Pedido</Link>
+                    <p>{clientRegister}</p>
+                    <button className="button-pedidos" onClick={sendOrder}>Enviar Pedido<img className="waiter" src={waiter} alt="waiter"/>
                     </button>
                 </div>
             </div>           

@@ -4,7 +4,7 @@ import quit from '../images/menos.png'
 import agregar from '../images/agregar1.png'
 
 const BoxProducts = ({image, title, price, id, showProduct}) => {
-
+    
     const [count, setCount] = React.useState(0)
     
     const incremento = (event) => {

@@ -5,7 +5,6 @@ import './styles/listMenu.css'
 import BoxPedidos from './Box-Pedidos'
 import BoxProducts from './Box-Products'
 
-
 const ListProducts = () => {
     const [initialState, setState] = React.useState({
         products: [],
@@ -45,7 +44,15 @@ const ListProducts = () => {
         const arrayFilter = order.filter((ele) => parseInt(ele.idOrder) !== parseInt(id))
         setOrder(arrayFilter)
     }
-
+    const sendOrderBD = (orderBD) => {
+        console.log(orderBD)
+        firebase.firestore()
+        .collection('orders')
+        .add({
+            orderBD,
+            Status:'Pendiente'
+        })
+       }
     return (
         <Fragment>
             <Navbar />
@@ -94,6 +101,7 @@ const ListProducts = () => {
                 order={order}
                 eventChange={eventChange} client={client}
                 ProductItemOrder={ProductItemOrder}
+                sendOrderBD={sendOrderBD}
                 />
             </div>
         </Fragment>
