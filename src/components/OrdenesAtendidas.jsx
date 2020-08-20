@@ -19,7 +19,6 @@ const OrdenesAtendidas = () => {
                     setState(data)
                 })
     }, [])
-    // console.log(state)
     return (
         <Fragment>
             <NavbarPedido />
