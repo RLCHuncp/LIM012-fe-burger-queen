@@ -37,7 +37,7 @@ const BoxProducts = ({image, title, price, id, showProduct}) => {
 
     const addProduct = (event) => {
         event.preventDefault();
-       const listProduct = addItemProduct(count, id, title, price)
+    const listProduct = addItemProduct(count, id, title, price)
         showProduct(listProduct)
     }
 
