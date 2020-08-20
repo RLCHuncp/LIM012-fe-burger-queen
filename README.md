@@ -1,41 +1,14 @@
-# Burger Queen
+# **BURGER QUEEN**
 
-## Preámbulo
-
-[React](https://reactjs.org/), [Vue](https://es.vuejs.org/index.html) y [Angular](https://angular.io/)
-son algunos de los _frameworks_ y _librerías_ de JavaScript más utilizados por
-lxs desarrolladorxs alrededor del mundo, y hay una razón para eso.
-En el contexto del navegador, [_mantener la interfaz sincronizada con el estado
-es difícil_](https://medium.com/dailyjs/the-deepest-reason-why-modern-javascript-frameworks-exist-933b86ebc445).
-Al elegir un _framework_ o _librería_ para nuestra interfaz, nos apoyamos en una
-serie de convenciones e implementaciones _probadas_ y _documentadas_ para
-resolver un problema común a toda interfaz web. Esto nos permite concentrarnos
-mejor (dedicar más tiempo) en las características _específicas_ de
-nuestra aplicación.
-
-Cuando elegimos una de estas tecnologías no solo importamos un pedacito de
-código para reusarlo (lo cuál es un gran valor per se), si no que adoptamos una
-**arquitectura**, una serie de **principios de diseño**, un **paradigma**, unas
-**abstracciones**, un **vocabulario**, una **comunidad**, etc...
-
-Como desarrolladora Front-end, estos kits de desarrollo pueden resultarte
-de gran ayuda para implementar rápidamente características de los proyectos en
-los que trabajes.
-
-## Resumen del proyecto
-
-Esta vez tenemos un proyecto 100% por encargo. Si bien siempre puedes (y debes)
-hacer sugerencias de mejoras y/o cambios, muchas veces trabajarás en proyectos
-en los que primero hay que asegurarse de cumplir con lo requerido.
-
+Esta vez tenemos un proyecto 100% por encargo.
 Un pequeño restaurante de hamburguesas, que está creciendo, necesita una
 interfaz en la que puedan tomar pedidos usando una _tablet_, y enviarlos
 a la cocina para que se preparen ordenada y eficientemente (a través de un
 _backend_ del que nos darán detalles más adelante).
 
-![burger-queen](https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg)
+![burger-queen](images-readme/restaurant.jpg)
 
-Esta es la información que tenemos del cliente:
+Información que tenemos del cliente:
 
 > Somos **Burguer Queen**, una cadena de comida 24hrs.
 >
@@ -80,7 +53,10 @@ con todos sus _productos_. El usuario debe poder ir eligiendo qué _productos_
 agregar y la interfaz debe ir mostrando el _resumen del pedido_ con el
 costo total.
 
-![out](https://user-images.githubusercontent.com/110297/45984241-b8b51c00-c025-11e8-8fa4-a390016bee9d.gif)
+## Prototipo 
+![inicio](images-readme/tablet-inicio.png)
+
+![inicio](images-readme/tablet-desayuno.png)
 
 ## Objetivos de aprendizaje
 
@@ -121,16 +97,6 @@ pendientes de tu proyecto anterior.
 - [ ] Que es [Workbox](https://developers.google.com/web/tools/workbox)
 - [ ] Qué es un `serviceWorker`
 
-### Angular
-
-- [ ] [Uso de Components | Templates](https://angular.io/guide/architecture-components#introduction-to-components)
-- [ ] [Directivas estructurales (ngIf / ngFor)](https://angular.io/guide/template-syntax#built-in-structural-directives)
-- [ ] [@Input | @Ouput](https://angular.io/guide/component-interaction#component-interaction)
-- [ ] [Creación y uso de servicios](https://angular.io/guide/architecture-services#providing-services)
-- [ ] [Manejos de rutas](https://angular.io/guide/router)
-- [ ] [Uso de Observables](https://angular.io/guide/observables-in-angular)
-- [ ] [Uso de HttpClient](https://angular.io/guide/http)
-- [ ] [Estilos de componentes (ngStyle / ngClass)](https://angular.io/guide/template-syntax#built-in-directives)
 
 ### React
 
@@ -144,21 +110,6 @@ pendientes de tu proyecto anterior.
 - [ ] [`hooks`](https://es.reactjs.org/docs/hooks-intro.html)
 - [ ] [`CSS` modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet)
 - [ ] [React Router](https://reacttraining.com/react-router/web)
-
-### Vue
-
-- [ ] [Instancia de Vue.js](https://es.vuejs.org/v2/guide/instance.html)
-- [ ] [Datos y métodos](https://es.vuejs.org/v2/guide/instance.html#Datos-y-Metodos)
-- [ ] [Uso y creación de Componentes](https://vuejs.org/v2/guide/components.html)
-- [ ] [Props](https://es.vuejs.org/v2/guide/components.html#Pasando-datos-a-componentes-secundarios-con-Props)
-- [ ] Directivas ([v-bind](https://es.vuejs.org/v2/api/#v-bind) | [v-model](https://es.vuejs.org/v2/guide/forms.html))
-- [ ] Renderizado condicional ([v-if](https://es.vuejs.org/v2/guide/conditional.html#v-if) | [v-else](https://es.vuejs.org/v2/guide/conditional.html#v-else))
-- [ ] Iteraciones ([v-for](https://es.vuejs.org/v2/guide/list.html#Mapeando-una-matriz-a-elementos-con-v-for))
-- [ ] Eventos ([v-on](https://es.vuejs.org/v2/guide/events.html))
-- [ ] [Propiedades Computadas y Observadores](https://es.vuejs.org/v2/guide/computed.html)
-- [ ] [Router](https://router.vuejs.org/guide/#html)
-- [ ] [Clases y Estilos](https://es.vuejs.org/v2/guide/class-and-style.html)
-- [ ] [Gestión de Estado](https://es.vuejs.org/v2/guide/state-management.html#Gestion-de-estado-simple-desde-cero)
 
 ### Firebase
 
@@ -193,52 +144,6 @@ pendientes de tu proyecto anterior.
 - [ ] Linting
 
 ---
-
-## Consideraciones
-
-- Este proyecto se debe "resolver" de a pares.
-
-- La duración propuesta del proyecto es 5 sprints, con una duración de una semana cada uno.
-
-- Trabaja en una historia hasta terminarla antes de pasar a la siguiente.
-
-- Trabaja hasta la historia que puedas en el tiempo especificado.
-
-- La lógica del proyecto debe estar implementada completamente en JavaScript
-  (ES6+), HTML y CSS y empaquetada de manera automatizada.
-
-- En este proyecto Sí está permitido usar librerías o frameworks
-  (debes elegir entre [React](https://reactjs.org/), [Vue](https://es.vuejs.org/index.html),
-  [Angular](https://angular.io/) o Vanilla Js).
-
-- La aplicación debe ser un _Single Page App_. Los pedidos los tomaremos desde una
-  _tablet_, pero **no queremos una app nativa**, sino una web app que sea
-  **responsive** y pueda funcionar **offline**.
-
-- La interfaz debe estar diseñada específicamente para correr en
-  **tablets**.
-
-- Necesitamos pensar bien en el aspecto UX de quienes van a tomar los pedidos,
-  el tamaño y aspecto de los botones, la visibilidad del estado actual del
-  pedido, etc.
-
-- La aplicación desplegada debe tener 80% o más el las puntuaciones de
-  Performance, Progressive Web App, Accessibility y Best Practices de Lighthouse.
-
-- Deberas de guardar la información de los pedidos realizados por
-  lo cual te recomendamos utilizar [Firebase](https://firebase.google.com/).
-
-- La aplicación debe hacer uso de `npm-scripts` y contar con scripts `start`,
-  `test`, `build` y `deploy`, que se encarguen de arrancar, correr las pruebas,
-  empaquetar y desplegar la aplicación respectivamente.
-
-- Los tests unitarios deben cubrir un mínimo del 90% de _statements_, _functions_,
-  _lines_ y _branches_.
-
-- Por otro lado, deberás definir la estructura de carpetas y archivos que consideres
-  necesaria. Puedes guiarte de las convenciones del _framework_ elegido. Por ende,
-  los _tests_ y el _setup_ necesario para ejecutarlos, serán hechos por ti.
-
 ## Criterios de aceptación del proyecto
 
 ### Definición del producto
@@ -350,72 +255,3 @@ rápidamente a los clientes que las hicieron.
 ### Cloud functions
 
 - [Cloud functions - Firebase Docs](https://firebase.google.com/docs/functions/?hl=es-419)
-
-----------INDEX.JS PRACTICANDO----
-JXS Y REACT.CREATEELEMENT
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-// import App from './App';
-// import * as serviceWorker from './serviceWorker';
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-// serviceWorker.unregister();
-
-
-// const element = document.createElement('h1')
-// element.innerText = "Hello, world React";
-
-// const container = document.getElementById('app');
-// container.appendChild(element);
-
-// ejemplo con React
-// primero tenemos que importar React y ReactDOM
-import React from 'react';
-import ReactDOM from 'react-dom';
-// 3.Badge Importamos
-import Badge from './components/Badge'
-
-// JSX
-// const element = <h1>Hola, estás probando JSX</h1>
-
-// const container = document.getElementById('app');
-
-// ReactDOM.render(__qué vamos a renderizar__, __dónde vamos a renderizar__);
-// ReactDOM.render(element, container)
-
-// React.createElement
-// const element = React.createElement('h1', {}, 'Hola estás probando react.createElement');
-// const container = document.getElementById('app');
-// ReactDOM.render(element, container);
-// Ahora con los que tienen atributos y agregando variables
-// const name = 'Lucy';
-// const element = React.createElement('a', {href: 'https://www.linkedin.com/mynetwork/'}, `Linkendin de ${name}`);
-// const container = document.getElementById('app');
-
-// const name = 'Lucy'
-// const element = <div>
-//   <h1>Hola, mi nombre es {name}</h1>
-//   <p>Soy front-end Developer egresada de Laboratoria</p>
-// </div>
-
-// const container = document.getElementById('app')
-
-const name = 'Lucy';
-const element = React.createElement(
-  'div', {},
-  React.createElement('h1', {}, 'Hola hola'),
-  React.createElement('p', {} , `Soy ${name}`)
-);
-const container = document.getElementById('app')
-ReactDOM.render(element, container);
-

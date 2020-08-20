@@ -66,3 +66,72 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+----------INDEX.JS PRACTICANDO----
+JXS Y REACT.CREATEELEMENT
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import './index.css';
+// import App from './App';
+// import * as serviceWorker from './serviceWorker';
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+// serviceWorker.unregister();
+
+
+// const element = document.createElement('h1')
+// element.innerText = "Hello, world React";
+
+// const container = document.getElementById('app');
+// container.appendChild(element);
+
+// ejemplo con React
+// primero tenemos que importar React y ReactDOM
+import React from 'react';
+import ReactDOM from 'react-dom';
+// 3.Badge Importamos
+import Badge from './components/Badge'
+
+// JSX
+// const element = <h1>Hola, estás probando JSX</h1>
+
+// const container = document.getElementById('app');
+
+// ReactDOM.render(__qué vamos a renderizar__, __dónde vamos a renderizar__);
+// ReactDOM.render(element, container)
+
+// React.createElement
+// const element = React.createElement('h1', {}, 'Hola estás probando react.createElement');
+// const container = document.getElementById('app');
+// ReactDOM.render(element, container);
+// Ahora con los que tienen atributos y agregando variables
+// const name = 'Lucy';
+// const element = React.createElement('a', {href: 'https://www.linkedin.com/mynetwork/'}, `Linkendin de ${name}`);
+// const container = document.getElementById('app');
+
+// const name = 'Lucy'
+// const element = <div>
+//   <h1>Hola, mi nombre es {name}</h1>
+//   <p>Soy front-end Developer egresada de Laboratoria</p>
+// </div>
+
+// const container = document.getElementById('app')
+
+const name = 'Lucy';
+const element = React.createElement(
+  'div', {},
+  React.createElement('h1', {}, 'Hola hola'),
+  React.createElement('p', {} , `Soy ${name}`)
+);
+const container = document.getElementById('app')
+ReactDOM.render(element, container);
+
