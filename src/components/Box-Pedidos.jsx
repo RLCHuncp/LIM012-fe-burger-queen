@@ -13,8 +13,8 @@ const BoxPedidos = ({order, eventChange, client, ProductItemOrder, sendOrderBD})
 
     const getTotalSum = () => {
         return order.reduce(
-          (sum,{Precio}) =>sum+Precio,
-          0
+        (sum,{Precio}) =>sum+Precio,
+        0
         );
     }
     let history = useHistory();
@@ -69,11 +69,10 @@ const BoxPedidos = ({order, eventChange, client, ProductItemOrder, sendOrderBD})
                         }
                     </div>
                     <p className="total--suma">TOTAL: <span>${getTotalSum(order)}</span></p>
-                    <p>{clientRegister}</p>
                     <button className="button-pedidos" onClick={sendOrder}>Enviar Pedido<img className="waiter" src={waiter} alt="waiter"/>
                     </button>
                 </div>
-            </div>           
+            </div>
         </Fragment>
     )
 }
