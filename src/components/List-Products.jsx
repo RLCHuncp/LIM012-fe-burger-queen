@@ -33,7 +33,6 @@ const ListProducts = () => {
     }, [])
 
     const showProduct = (product) => {
-        // console.log(product)
         setOrder(prevState => [...prevState, product])
     }
     const eventChange = (event) => {
@@ -52,7 +51,7 @@ const ListProducts = () => {
             orderBD,
             Status:'Pendiente'
         })
-       }
+    }
     return (
         <Fragment>
             <Navbar />
