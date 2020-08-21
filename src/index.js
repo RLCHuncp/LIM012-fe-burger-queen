@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import * as serviceWorker from './serviceWorker';
 
 
 ReactDOM.render(
@@ -10,13 +11,4 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-
-
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import Main from './components/Main';
-// import Main from './components/Main.jsx'
-
-// const container = document.getElementById('app');
-// ReactDOM.render(<Main />, container);
+serviceWorker.unregister();
