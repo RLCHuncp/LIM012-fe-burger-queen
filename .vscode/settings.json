@@ -1,9 +1,0 @@
-{
-    "npm.includeDirectories": [
-    
-    ],
-    "emmet.includeLanguages": {
-        "javascript": "javascriptreact"
-      },
-      "emmet.triggerExpansionOnTab": true
-}
