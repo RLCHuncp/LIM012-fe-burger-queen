@@ -56,9 +56,9 @@ const BoxPedidos = ({order, eventChange, client, ProductItemOrder, sendOrderBD})
                         {
                             order.map((product) => (
                             <ul key={product.id}>
-                                <li>{product.Cantidad}</li>
-                                <li>{product.Descripcion}</li>
-                                <li>{product.Precio}</li>
+                                <li data-testid='item'>{product.Cantidad}</li>
+                                <li data-testid='item'>{product.Descripcion}</li>
+                                <li data-testid='item'>{product.Precio}</li>
                                 <li>
                                     <img src={err} id={product.idOrder}
                                     onClick={btnEliminarItem}
