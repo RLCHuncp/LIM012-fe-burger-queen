@@ -17,16 +17,16 @@ function App() {
         <Route path="/OrdenesAtendidas">
           <OrdenesAtendidas />
         </Route>
-        <Route path="/OrdenesEspera">
+        <Route exact path="/OrdenesEspera">
           <OrdenesEspera />
         </Route>
-        <Route path="/Pedidos">
+        <Route exact path="/Pedidos">
           <BoxPedidos />
         </Route>
-        <Route path ="/ListMenu">
+        <Route exact path ="/ListMenu">
           <ListProducts />
         </Route>
-        <Route path="/" >
+        <Route exact path="/" >
           <Inicio />
         </Route>
       </Switch>
