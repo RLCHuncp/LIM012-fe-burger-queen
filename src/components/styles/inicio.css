@@ -4,7 +4,7 @@ body {
   padding: 0;
 }
 .container {
-  max-width: 100%;  
+  width: 100%;  
 }
 .main-burger {
   padding: 0;
@@ -137,3 +137,29 @@ a {
         z-index: -1;
       }
     }
+@media (min-width: 320px) and (max-width: 480px) {
+  .container__info{
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+    .box__phrase{
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box__phrase h1{
+      font-size: 1.2em;
+      letter-spacing: 0.2rem;
+      padding-bottom: 20px;
+    }
+    .box__phrase-button{
+      align-self: center;
+    }
+    .box__img--content{
+      width: 250px;
+      justify-self: center;
+    }
+}
